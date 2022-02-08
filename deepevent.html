@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <p id="para"></p>
+    <input id="input-text" type="text" />
+    <button id="update-name">Update</button>
+    <button onclick="redButton()">clicek on the redButton</button>
+    <button id="indigoButton">clicek on the indigoButton</button>
+    <script>
+      document.getElementById("update-name").addEventListener("click", function () {
+        const inputText = document.getElementById("input-text");
+        const p = document.getElementById("para");
+        p.innerText = inputText.value;
+        inputText.value = "";
+      });
+      //hello world show
+      function redButton() {
+        const paragrap = document.getElementById("para");
+        paragrap.innerText = "hello world";
+      }
+      document.getElementById("indigoButton").addEventListener("click", function () {
+        const p = document.getElementById("para");
+        p.innerText = "Hello Bangladesh";
+      });
+    </script>
+  </body>
+</html>

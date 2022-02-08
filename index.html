@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>welcome to my bolog web site</h1>
+    </header>
+    <section id="sectionBlog">
+      <header>
+        <h2>Blog titles</h2>
+        <ul id="bolgs-add">
+          <li>blog-1</li>
+          <li>blog-2</li>
+          <li>blog-3</li>
+          <li>blog-4</li>
+        </ul>
+      </header>
+      <article class="blog1">
+        <h2 id="firstTitle">my awasome bloag -1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore sit voluptas libero a
+          enim nemo assumenda officiis eius exercitationem doloribus eos, pariatur fugit, dolorem
+          quod accusamus fugiat nisi repellat quidem.
+        </p>
+      </article>
+      <article class="blog">
+        <h2 id="secondTitle">my awasome bloag -2</h2>
+        <p>
+          Ratione aliquid aspernatur soluta! Consequatur sunt minus laudantium error assumenda
+          numquam odit cum, consectetur eos! Doloremque unde rem ratione necessitatibus eius libero
+          voluptate est, dolorem ipsa debitis eos quibusdam perspiciatis?
+        </p>
+      </article>
+      <article class="blog" id="lastTitle">
+        <h2 id="thirdTitle">my awasome bloag -3</h2>
+        <p id="paragrap">
+          Est illo corporis, mollitia hic iusto, ab velit veritatis nobis ipsam architecto tempora a
+          reprehenderit sapiente libero ea officiis deserunt placeat animi quod perferendis maxime!
+          Illum, officia? Quaerat, aperiam vero.
+        </p>
+      </article>
+    </section>
+    <script>
+      const article = document.createElement("article");
+      article.classList.add("blog");
+      const sectionBlog = document.getElementById("sectionBlog");
+      sectionBlog.appendChild(article);
+      article.innerHTML = `
+      <h3>my awasome blog-5</h3>
+      <p>Est illo corporis, mollitia hic iusto, ab velit veritatis nobis ipsam architecto tempora a</p>`;
+      // step: tag or element create korte hobe
+      const li = document.createElement("li");
+      // tag or element er moddhe text likte hobe.
+      li.innerText = "blogs-5";
+      // step: where add this element
+      const ul = document.getElementById("bolgs-add");
+      // apend to new element
+      ul.appendChild(li);
+      let blogs = document.getElementsByClassName("blog");
+      for (let blog of blogs) {
+        blog.style.border = "2px solid red";
+        blog.style.borderRadius = "10px";
+        blog.style.marginBottom = "10px";
+        blog.style.padding = "10px";
+      }
+      /*       secondTitle.style.textAlign = "center";
+      firstTitle.innerText = "hello how are you";
+      const third = document.getElementById("thirdTitle");
+      third.innerText = "this id our title";
+      third.style.color = "yollo";
+      third.style.textAlign = "center";
+      third.style.textTransform = "uppercase";
+      third.style.backgroundColor = "salmon";
+      third.style.padding = "10px"; */
+
+      /*       const student = {
+        name: "rahman",
+        roll: 907363,
+        semester: 8,
+      };
+      const blogTitles = document.getElementsByTagName("h2");
+      console.log(blogTitles);
+      for (let p2 of blogTitles) {
+        console.log(p2.innerText);
+      }
+      const blogs = document.getElementsByTagName("p");
+      for (let blog of blogs) {
+        console.log(blog.innerHTML);
+      } */
+      const remove = document.getElementById("bolgs-add");
+      // const child = remove.children[2];
+      // remove.removeChild(child);
+      remove.removeChild(remove.children[2]);
+    </script>
+  </body>
+</html>
